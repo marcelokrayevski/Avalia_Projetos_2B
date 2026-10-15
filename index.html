@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de Apresentações - Mockups</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- SDKs do Firebase via CDN (Compatiblity Layer) -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <h1>Avaliação de Apresentações</h1>
+        <a href="admin.html" class="btn-secondary">Área do Professor</a>
+      </div>
+      <p>Apresentação de Mockups e Storytelling</p>
+    </header>
+
+    <!-- Passo 1: Identificação -->
+    <section id="step-identificacao">
+      <div class="form-group">
+        <label for="select-mesa">Selecione sua Mesa:</label>
+        <select id="select-mesa">
+          <option value="">-- Escolha sua mesa --</option>
+          <option value="1">Mesa 1</option>
+          <option value="2">Mesa 2</option>
+          <option value="3">Mesa 3</option>
+          <option value="4">Mesa 4</option>
+          <option value="5">Mesa 5</option>
+          <option value="6">Mesa 6</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="select-aluno">Selecione seu Nome:</label>
+        <select id="select-aluno" disabled>
+          <option value="">-- Escolha a mesa primeiro --</option>
+        </select>
+      </div>
+
+      <button id="btn-iniciar" type="button">Iniciar Avaliação</button>
+    </section>
+
+    <!-- Passo 2: Formulário com as Perguntas -->
+    <form id="form-avaliacao" style="display:none;">
+      <div id="quiz-container"></div>
+      <button type="submit" style="margin-top: 20px;">Enviar Avaliação</button>
+    </form>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="student.js"></script>
+</body>
+</html>
